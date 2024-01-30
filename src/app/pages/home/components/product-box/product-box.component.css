@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .responsive-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .responsive-card .flex {
+    flex-direction: column;
+  }
+
+  .responsive-card h5,
+  .responsive-card p {
+    font-size: smaller; /* Adjust font size for smaller screens */
+  }
+
+  .responsive-card .flex.justify-between {
+    flex-direction: column;
+    gap: 10px; /* Add some space between elements */
+  }
+}

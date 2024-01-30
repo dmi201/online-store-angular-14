@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .responsive-card > .flex {
+    flex-direction: column;
+  }
+
+  .responsive-card .items-center {
+    justify-content: start;
+  }
+
+  .responsive-card mat-icon {
+    margin: 0 auto; /* Center icons */
+  }
+}

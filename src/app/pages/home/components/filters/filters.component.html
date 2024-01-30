@@ -1,0 +1,26 @@
+<mat-expansion-panel *ngIf="categories && !isSmallScreen">
+  <mat-expansion-panel-header>
+    <mat-panel-title> Categorii </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let category of categories" [value]="category">
+      <button (click)="onShowCategory(category)">{{ category }}</button>
+    </mat-list-option>
+  </mat-selection-list>
+</mat-expansion-panel>
+
+<mat-form-field
+  *ngIf="categories && isSmallScreen"
+  style="display: flex; justify-content: center; width: 100%"
+>
+  <mat-label>Categorii</mat-label>
+  <mat-select [multiple]="false">
+    <mat-option
+      *ngFor="let category of categories"
+      [value]="category"
+      (click)="onShowCategory(category)"
+    >
+      {{ category }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
